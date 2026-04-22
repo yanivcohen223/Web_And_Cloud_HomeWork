@@ -61,3 +61,41 @@ nav ul li a:hover {
     font-weight: 700;
 }
 
+.text-section {
+    position:absolute;
+    width: 1200px;
+    height: 797px;
+    margin: 0 auto;
+}
+
+.homePageBackgroundImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.text-content{
+    position: absolute;
+    z-index: 10;
+    top: 120px;
+    left: 32px;
+    width: 448px;
+}
+
+.text-content h1 {
+    font-size: 96px; 
+    font-weight: 800;
+    color: #612999;
+    line-height: 100%;
+    margin-bottom: 16px;
+}
+
+.hero-text-box p {
+   font-size: 20px;
+    line-height: 1.4;
+    color: #333333;
+}
