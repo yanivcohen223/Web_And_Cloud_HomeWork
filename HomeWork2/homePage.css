@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito';
+    background-color: #f9f9f9;
+}
+
+#wrapper {
+    width: 1200px; 
+    margin: 0 auto; 
+    background: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1046px;
+    height: 64px;
+    margin: 32px auto 0 auto;
+    background: #ffffff;
+    padding: 0 32px;
+}
+
+
+header h1{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.25rem; 
+    text-transform: uppercase;
+    color: #3E3F43;
+}
+
+header h1 img{
+    width: 64px;
+    height: 64px;
+    margin-right: 12px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 30px; 
+    color: #612999;
+}
+
+nav ul li a:hover {
+    font-style: bold;
+    font-weight: 700;
+}
+
