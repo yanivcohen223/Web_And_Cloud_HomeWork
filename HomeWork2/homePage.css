@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -62,10 +65,11 @@ nav ul li a:hover {
 }
 
 .text-section {
-    position:absolute;
+    position:relative;
     width: 1200px;
     height: 797px;
     margin: 0 auto;
+    z-index: 1;
 }
 
 .homePageBackgroundImg {
@@ -98,4 +102,35 @@ nav ul li a:hover {
    font-size: 20px;
     line-height: 1.4;
     color: #333333;
+}
+
+.AboutSection{
+    margin-top: 40px; 
+    width: 1136px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+}
+
+.AboutSection h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500; 
+    font-size: 40px;   
+    line-height: 40px; 
+    color: #612999;     
+    margin-bottom: 32px; 
+}
+
+.about-text{
+    width: 1136px;
+}
+
+.about-text p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;  
+    font-size: 20px;    
+    line-height: 1.41;  
+    color: #333333;
+    text-align: justify;
+    margin-bottom: 24px; 
 }
