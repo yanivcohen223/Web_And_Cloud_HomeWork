@@ -14,8 +14,10 @@ body {
 }
 
 #wrapper {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 16px;
     background: white;
 }
 
@@ -23,11 +25,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1046px;
+    width: 100%;
+    max-width: 1046px;
     height: 64px;
     margin: 32px auto 0 auto;
-    background: #ffffff;
     padding: 0 32px;
+    background: #ffffff;
 }
 
 
@@ -67,32 +70,32 @@ nav ul li a:hover {
 
 .text-section {
     position: relative;
-    width: 1200px;
+    width: 100%;
     height: 797px;
-    margin: 0 auto;
-    z-index: 1;
+    overflow: hidden;
 }
 
 .homePageBackgroundImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
 }
 
 .text-content {
     position: absolute;
     z-index: 10;
     top: 120px;
-    left: 32px;
-    width: 448px;
+    width: min(448px, 90%);
+    left: 16px;
 }
 
 .text-content h1 {
-    font-size: 96px;
+    font-size: clamp(40px, 6vw, 96px);
     font-weight: 800;
     color: #612999;
     line-height: 100%;
@@ -106,11 +109,10 @@ nav ul li a:hover {
 }
 
 .AboutSection {
-    margin-top: 40px;
-    width: 1136px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 32px;
+    width: 100%;
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 40px 32px 0 32px;
 }
 
 .AboutSection h2 {
@@ -137,7 +139,8 @@ nav ul li a:hover {
 }
 
 .GamesSection {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 60px auto;
     padding: 0 32px;
 }
@@ -151,9 +154,9 @@ nav ul li a:hover {
 
 .GamesDiv {
     display: grid;
-    grid-template-columns: repeat(2, 376px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
-    width: 784px;
+    width: 100%;
 }
 
 .GameCard {
@@ -250,4 +253,72 @@ nav ul li a:hover {
     width: 28px;
     height: 28px;
     fill: #ffffff;
+}
+
+footer {
+    height: 287px;
+    padding-left: 32px;
+    background-color: #ff9b9b;
+}
+
+.container {
+    display: flex;
+    gap: 150px;
+}
+footer ul{
+    list-style: none;
+}
+
+footer li {
+    padding: 8px 0px;
+}
+
+footer div {
+    padding-top: 16px;
+}
+footer h3 {
+    margin-bottom: 8px;
+}
+.icons {
+    padding-top: 16px;
+    display: flex;
+    gap: 20px;
+}
+
+.twitterIcon {
+    width: 24.62px;
+    height: 20px;
+}
+
+.facebookIcon {
+    width: 20px;
+    height: 19.88px;
+}
+
+.instagramIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.legal {
+    margin-top: 16.12px;
+}
+
+@media (max-width: 768px) {
+
+    nav ul {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .GameCard {
+        width: 100%;
+    }
+
 }
