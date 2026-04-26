@@ -68,76 +68,6 @@ nav ul li a:hover {
     font-weight: 700;
 }
 
-.text-section {
-    position: relative;
-    width: 100%;
-    height: 797px;
-    overflow: hidden;
-}
-
-.homePageBackgroundImg {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-}
-
-.text-content {
-    position: absolute;
-    z-index: 10;
-    top: 120px;
-    width: min(448px, 90%);
-    left: 16px;
-}
-
-.text-content h1 {
-    font-size: clamp(40px, 6vw, 96px);
-    font-weight: 800;
-    color: #612999;
-    line-height: 100%;
-    margin-bottom: 16px;
-}
-
-.hero-text-box p {
-    font-size: 20px;
-    line-height: 1.4;
-    color: #333333;
-}
-
-.AboutSection {
-    width: 100%;
-    max-width: 1136px;
-    margin: 0 auto;
-    padding: 40px 32px 0 32px;
-}
-
-.AboutSection h2 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 40px;
-    color: #612999;
-    margin-bottom: 32px;
-}
-
-.about-text {
-    width: 1136px;
-}
-
-.about-text p {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.41;
-    color: #333333;
-    text-align: justify;
-    margin-bottom: 24px;
-}
-
 .GamesSection {
     width: 100%;
     max-width: 1200px;
@@ -304,21 +234,142 @@ footer h3 {
     margin-top: 16.12px;
 }
 
-@media (max-width: 768px) {
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 32px;
+}
+
+.xboxGames {
+    height: 300px;
+    width: 300px;
+}
+
+.playstationGames {
+    height: 300px;
+    width:   388.29px;
+}
+
+.nintendoGames {
+    height: 300px;
+    width: 300px;
+}
+
+.gamesList {
+    padding: 16px 16px 0 32px;
+}
+
+.gamesList h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    color: #612999;
+    margin-bottom: 32px;
+}
+
+.gamesList ul {
+    list-style: none;
+}
+
+.gamesList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.storeInfo {
+    padding-top: 32px;
+    padding-left: 32px;
+
+}
+
+.storeInfo h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    color: #612999;
+    margin-bottom: 16px;
+}
+
+.imgIcon {
+    height: 42.38px;
+    width: 45px;
+}
+
+.listIcons {
+    width: 60px;
+    height: 60px;
+    background: #612999;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gameStore {
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.xboxGames,
+.playstationGames,
+.nintendoGames {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
 
     nav ul {
-        gap: 16px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .storeInfo {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     header {
         flex-direction: column;
-        height: auto;
-        gap: 10px;
+        gap: 12px;
     }
 
-    .GameCard {
-        width: 100%;
+    nav ul {
+        gap: 16px;
     }
-
 }
